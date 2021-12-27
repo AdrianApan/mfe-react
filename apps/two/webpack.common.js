@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       ...federationConfig,
-      name: 'two',
+      name: 'acme_two',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',

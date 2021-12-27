@@ -1,7 +1,7 @@
 import React from 'react'
 
-const One = React.lazy(() => import('one/App'))
-const Two = React.lazy(() => import('two/App'))
+const One = React.lazy(() => import('acme_one/App'))
+const Two = React.lazy(() => import('acme_two/App'))
 
 const App = () => (
   <>

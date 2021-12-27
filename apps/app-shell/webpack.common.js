@@ -12,8 +12,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'app-shell',
       remotes: {
-        one: 'one@http://localhost:8001/remoteEntry.js',
-        two: 'two@http://localhost:8002/remoteEntry.js',
+        acme_one: 'acme_one@http://localhost:8001/remoteEntry.js',
+        acme_two: 'acme_two@http://localhost:8002/remoteEntry.js',
       },
       shared: {
         ...deps,

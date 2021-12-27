@@ -20,7 +20,7 @@ module.exports = merge(common, {
   plugins: [
     new MFLiveReloadPlugin({
       port: 8002,
-      container: 'two',
+      container: 'acme_two',
       standalone: false,
     }),
   ],

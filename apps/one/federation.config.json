@@ -1,5 +1,5 @@
 {
-  "name": "one",
+  "name": "acme_one",
   "exposes": {
     "./App": "./src/App"
   }
