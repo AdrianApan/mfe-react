@@ -1,0 +1,48 @@
+{
+  "name": "app-shell",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "serve": "cd dist && PORT=8000 npx serve",
+    "start": "webpack-dev-server --mode development --live-reload --config webpack.dev.js",
+    "clean": "rm -rf dist",
+    "test": "jest --maxWorkers 2 --no-cache",
+    "lint": "yarn run eslint --ext .js,.jsx,.ts,.tsx,.json src"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "@babel/runtime": "7.16.5"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.5",
+    "@babel/preset-react": "7.16.5",
+    "@babel/preset-typescript": "7.16.5",
+    "@babel/eslint-parser": "7.16.5",
+    "@babel/plugin-transform-runtime": "7.16.5",
+    "@babel/preset-env": "7.16.5",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "@module-federation/fmr": "0.0.7",
+    "@pixability-ui/federated-types": "0.2.0",
+    "babel-loader": "8.2.3",
+    "bundle-loader": "0.5.6",
+    "html-webpack-plugin": "5.5.0",
+    "serve": "13.0.2",
+    "typescript": "4.5.4",
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.7.1",
+    "webpack-merge": "5.8.0",
+    "prettier": "2.5.1",
+    "eslint": "8.5.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-import-resolver-typescript": "2.5.0"
+  }
+}
