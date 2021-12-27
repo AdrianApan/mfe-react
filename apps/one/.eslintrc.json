@@ -39,5 +39,5 @@
     "ecmaVersion": 2018,
     "allowImportExportEverywhere": true
   },
-  "ignorePattern": "webpack.config.js"
+  "ignorePatterns": ["webpack.*.js"]
 }
