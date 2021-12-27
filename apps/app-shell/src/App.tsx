@@ -6,9 +6,13 @@ const Two = React.lazy(() => import('two/App'))
 const App = () => (
   <>
     <p>This lives in the app shell</p>
-    <React.Suspense fallback="Loading...">
+    <React.Suspense fallback="Loading remote one...">
       <One />
-      <br />
+    </React.Suspense>
+
+    <br />
+
+    <React.Suspense fallback="Loading remote two...">
       <Two />
     </React.Suspense>
   </>
