@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "serve": "cd dist && PORT=8002 npx serve",
-    "start": "webpack-dev-server --mode development --live-reload --config webpack.dev.js",
+    "start": "webpack serve --config webpack.dev.js",
     "clean": "rm -rf dist",
     "test": "jest --maxWorkers 2 --no-cache --passWithNoTests",
     "lint": "yarn run eslint --ext .js,.jsx,.ts,.tsx,.json src",
@@ -26,5 +26,11 @@
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.7.1",
     "webpack-merge": "5.8.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "../../jest-setup.ts"
+    ]
   }
 }
