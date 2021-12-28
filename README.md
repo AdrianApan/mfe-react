@@ -4,14 +4,15 @@
 
 ```
 - React
+- Typescript
 - Webpack Module Federation
 - Babel
 - Lerna
 - Yarn
-- Typescript
+- Jest
+- React Testing Library
 - ESLint
 - Prettier
-- Hot reload with Federated Module Reload
 ```
 
 ## ℹ️ Requirements
@@ -63,6 +64,20 @@ cd apps/MFE_DIR
 yarn start
 ```
 
+#### _Clean `dist` folders after a build:_
+
+```
+yarn clean
+```
+
+#### _Run scripts in batch:_
+
+> You can run any remote (MFE) level script in a single batch by using the following format:
+
+```
+lerna run --parallel SCRIPT_NAME
+```
+
 ## 🖥 Adding a new MFE
 
 - 🚧 [WIP] Need a CLI wizard to generate new MFEs.
@@ -70,6 +85,12 @@ yarn start
 ## 🧩 Miscellaneous
 
 - To automate the type generation for the federate modules, the app is making use of the [`@pixability-ui/federated-types`](https://github.com/pixability/federated-types). To generate the federate types run `yarn make-types`.
+
+- Every remote (MFE) is using a `federation.config.json` file to define the federate configuration. This config is then used in the webpack config files by both the `ModuleFederationPlugin` and `MFLiveReloadPlugin` plugins.
+
+## ❓ F.A.Q.
+
+- 🚧 [WIP] Add FAQ section
 
 ## 🔍 Further reading
 
