@@ -3,6 +3,7 @@ const path = require('path')
 const { MFLiveReloadPlugin } = require('@module-federation/fmr')
 
 const common = require('./webpack.common.js')
+const federationConfig = require('./federation.config.json')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -20,7 +21,7 @@ module.exports = merge(common, {
   plugins: [
     new MFLiveReloadPlugin({
       port: 8002,
-      container: 'two',
+      container: federationConfig.name,
       standalone: false,
     }),
   ],
