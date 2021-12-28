@@ -70,8 +70,6 @@ yarn start
 
 - To automate the type generation for the federate modules, the app is making use of the [`@pixability-ui/federated-types`](https://github.com/pixability/federated-types). To generate the federate types run `yarn make-types`.
 
-- Known linting issue when using `React.lazy(() => import('foo/bar'))`. Running `yarn lint` will fail due to the `import/no-unresolved` rule. A potential solution to this issue could be prefixing the remotes: https://github.com/AdrianApan/mfe-react/pull/1. For time being we'll simply use `/* eslint-disable import/no-unresolved */`
-
 #### 🔍 Further reading
 
 - [Building Micro-Frontends](https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/), by Luca Mezzalira

@@ -27,11 +27,6 @@ module.exports = {
           eager: true,
           requiredVersion: deps['react-dom'],
         },
-        '@babel/runtime': {
-          singleton: true,
-          eager: true,
-          requiredVersion: deps['@babel/runtime'],
-        },
       },
     }),
     new HtmlWebpackPlugin({

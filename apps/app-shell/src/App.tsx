@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react'
 
 const One = React.lazy(() => import('one/App'))
