@@ -5,6 +5,7 @@
 ```
 - React
 - Webpack Module Federation
+- Babel
 - Lerna
 - Yarn
 - Typescript
