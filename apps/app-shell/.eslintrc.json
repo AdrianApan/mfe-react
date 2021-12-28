@@ -56,5 +56,5 @@
       "presets": ["@babel/preset-react"]
     }
   },
-  "ignorePatterns": ["webpack.*.js", "babel.config.js"]
+  "ignorePatterns": ["webpack.*.js", "jest-setup.ts", "**/*.spec.*", "**/*.test.*"]
 }
