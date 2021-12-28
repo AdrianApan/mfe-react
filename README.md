@@ -1,6 +1,6 @@
-## React micro-frontend PoC with Webpack Module Federation, Lerna and Typescript
+# React micro-frontend PoC with Webpack Module Federation, Lerna and Typescript
 
-#### 📚 Stack
+## 📚 Stack
 
 ```
 - React
@@ -14,7 +14,7 @@
 - Hot reload with Federated Module Reload
 ```
 
-#### ℹ️ Requirements
+## ℹ️ Requirements
 
 Requires Node JS version `14.17.0+`. Using `nvm`:
 
@@ -23,15 +23,15 @@ nvm install 14.17.0
 nvm use 14.17.0
 ```
 
-#### 🏃‍♀️ Running the app locally
+## 🏃‍♀️ Running the app locally
 
-_Installing dependencies:_
+#### _Installing dependencies:_
 
 ```
 yarn install
 ```
 
-_Generating federate types:_
+#### _Generating federate types:_
 
 > For more info about this, have a look at the `Miscellaneous` section below.
 
@@ -39,7 +39,7 @@ _Generating federate types:_
 yarn make-types
 ```
 
-_Running in dev mode:_
+#### _Running in dev mode:_
 
 > This will start all MFEs.
 
@@ -47,7 +47,7 @@ _Running in dev mode:_
 yarn start
 ```
 
-_Build and serve:_
+#### _Build and serve:_
 
 > This will build/serve all MFEs.
 
@@ -56,22 +56,22 @@ yarn build
 yarn serve
 ```
 
-_Running a single MFE:_
+#### _Running a single MFE:_
 
 ```
 cd apps/MFE_DIR
 yarn start
 ```
 
-#### 🖥 Adding a new MFE
+## 🖥 Adding a new MFE
 
 - 🚧 [WIP] Need a CLI wizard to generate new MFEs.
 
-#### 🧩 Miscellaneous
+## 🧩 Miscellaneous
 
 - To automate the type generation for the federate modules, the app is making use of the [`@pixability-ui/federated-types`](https://github.com/pixability/federated-types). To generate the federate types run `yarn make-types`.
 
-#### 🔍 Further reading
+## 🔍 Further reading
 
 - [Building Micro-Frontends](https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/), by Luca Mezzalira
 
