@@ -7,10 +7,11 @@
 - Typescript
 - Webpack Module Federation
 - Babel
-- Lerna
+- React Router
 - Yarn
 - Jest
 - React Testing Library
+- Lerna
 - ESLint
 - Prettier
 ```
