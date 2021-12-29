@@ -25,6 +25,21 @@ module.exports = {
           eager: true,
           requiredVersion: deps['react-dom'],
         },
+        '@mui/material': {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps['@mui/material'],
+        },
+        '@emotion/react': {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps['@emotion/react'],
+        },
+        '@emotion/styled': {
+          singleton: true,
+          eager: true,
+          requiredVersion: deps['@emotion/styled'],
+        },
       },
     }),
     new HtmlWebpackPlugin({
