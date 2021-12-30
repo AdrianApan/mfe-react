@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack').container.ModuleFederationPlugin
 
+const federationConfig = require('./federation.config.json')
 const deps = require('./package.json').dependencies
 
 module.exports = {
@@ -10,11 +11,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'app-shell',
-      remotes: {
-        vertical: 'vertical@http://localhost:8001/remoteEntry.js',
-        horizontal: 'horizontal@http://localhost:8002/remoteEntry.js',
-      },
+      ...federationConfig,
       shared: {
         ...deps,
         react: {
