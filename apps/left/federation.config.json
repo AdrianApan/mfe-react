@@ -1,0 +1,6 @@
+{
+  "name": "left",
+  "exposes": {
+    "./App": "./src/App"
+  }
+}
