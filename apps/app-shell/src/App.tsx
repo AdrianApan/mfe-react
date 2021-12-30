@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { Box } from '@mui/material'
 
 import { APP_SHELL_COLOR, APP_SHELL_LABEL } from './constants'
@@ -34,7 +34,10 @@ const App = () => {
 
         <React.Suspense fallback="Loading...">
           <Switch>
-            <Route exact path="/" render={() => renderMFE(Vertical)} />
+            <Route exact path="/">
+              <Redirect to="vertical" />
+            </Route>
+            <Route path="/vertical" render={() => renderMFE(Vertical)} />
             <Route path="/horizontal" render={() => renderMFE(Horizontal)} />
           </Switch>
         </React.Suspense>
