@@ -2,5 +2,9 @@
   "name": "horizontal",
   "exposes": {
     "./App": "./src/App"
+  },
+  "remotes": {
+    "left": "left@http://localhost:8003/remoteEntry.js",
+    "right": "right@http://localhost:8004/remoteEntry.js"
   }
 }
