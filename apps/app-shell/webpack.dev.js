@@ -15,5 +15,6 @@ module.exports = merge(common, {
       directory: path.join(__dirname, 'dist'),
     },
     port: 8000,
+    historyApiFallback: true,
   },
 })

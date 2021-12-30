@@ -17,6 +17,7 @@ module.exports = merge(common, {
       directory: path.join(__dirname, 'dist'),
     },
     port: 8002,
+    historyApiFallback: true,
   },
   plugins: [
     new MFLiveReloadPlugin({
