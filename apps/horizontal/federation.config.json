@@ -1,5 +1,5 @@
 {
-  "name": "two",
+  "name": "horizontal",
   "exposes": {
     "./App": "./src/App"
   }

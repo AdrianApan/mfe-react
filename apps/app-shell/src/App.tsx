@@ -8,7 +8,7 @@ import Nav from './components/Nav'
 import Label from './components/Label'
 
 const Vertical = React.lazy(() => import('vertical/App'))
-const Two = React.lazy(() => import('two/App'))
+const Horizontal = React.lazy(() => import('horizontal/App'))
 
 const renderMFE = (MFE: React.FunctionComponent) => {
   return (
@@ -35,7 +35,7 @@ const App = () => {
         <React.Suspense fallback="Loading...">
           <Switch>
             <Route exact path="/" render={() => renderMFE(Vertical)} />
-            <Route path="/horizontal" render={() => renderMFE(Two)} />
+            <Route path="/horizontal" render={() => renderMFE(Horizontal)} />
           </Switch>
         </React.Suspense>
         <Label color={APP_SHELL_COLOR} label={APP_SHELL_LABEL} />

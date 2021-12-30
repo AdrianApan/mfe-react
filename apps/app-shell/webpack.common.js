@@ -13,7 +13,7 @@ module.exports = {
       name: 'app-shell',
       remotes: {
         vertical: 'vertical@http://localhost:8001/remoteEntry.js',
-        two: 'two@http://localhost:8002/remoteEntry.js',
+        horizontal: 'horizontal@http://localhost:8002/remoteEntry.js',
       },
       shared: {
         ...deps,
