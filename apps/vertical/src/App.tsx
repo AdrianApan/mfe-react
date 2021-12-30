@@ -15,7 +15,7 @@ const App = () => (
     }}
   >
     <Typography variant="h5" mb={1}>
-      This content lives in the vertical MFE
+      This content lives in the Vertical MFE
     </Typography>
 
     <Typography variant="body2">
