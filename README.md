@@ -81,10 +81,6 @@ yarn clean
 lerna run --parallel SCRIPT_NAME
 ```
 
-## 🖥 Adding a new MFE
-
-- 🚧 [WIP] Need a CLI wizard to generate new MFEs.
-
 ## 🧩 Miscellaneous
 
 - To automate the type generation for the federate modules, the app is making use of the [`@pixability-ui/federated-types`](https://github.com/pixability/federated-types). To generate the federate types run `yarn make-types`.
