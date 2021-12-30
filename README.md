@@ -1,5 +1,7 @@
 # React micro-frontend PoC with Webpack Module Federation, Lerna and Typescript
 
+https://user-images.githubusercontent.com/69169115/147765748-f13fcc3b-3115-4be4-b9fe-60e38012a053.mp4
+
 ## 📚 Stack
 
 ```
@@ -88,10 +90,6 @@ lerna run --parallel SCRIPT_NAME
 - To automate the type generation for the federate modules, the app is making use of the [`@pixability-ui/federated-types`](https://github.com/pixability/federated-types). To generate the federate types run `yarn make-types`.
 
 - Each remote (MFE) is using a `federation.config.json` file to define the federate configuration. This config is then used in the webpack config files by both the `ModuleFederationPlugin` and `MFLiveReloadPlugin` plugins.
-
-## ❓ F.A.Q.
-
-- 🚧 [WIP] Add FAQ section
 
 ## 🔍 Further reading
 
