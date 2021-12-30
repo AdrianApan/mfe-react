@@ -12,7 +12,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'app-shell',
       remotes: {
-        one: 'one@http://localhost:8001/remoteEntry.js',
+        vertical: 'vertical@http://localhost:8001/remoteEntry.js',
         two: 'two@http://localhost:8002/remoteEntry.js',
       },
       shared: {

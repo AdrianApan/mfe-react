@@ -1,52 +1,44 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
+
+import { APP_SHELL_COLOR, APP_SHELL_LABEL } from './constants'
 
 import Nav from './components/Nav'
 import Label from './components/Label'
 
-const One = React.lazy(() => import('one/App'))
+const Vertical = React.lazy(() => import('vertical/App'))
 const Two = React.lazy(() => import('two/App'))
 
-const APP_SHELL_COLOR = '#9ab4e9'
+const renderMFE = (MFE: React.FunctionComponent) => {
+  return (
+    <React.Suspense fallback="Loading...">
+      <MFE />
+    </React.Suspense>
+  )
+}
 
 const App = () => {
-  const [showBoundaries, setShowBoundaries] = useState(false)
-
-  const toggleBoundaries = () => setShowBoundaries((prevShowBoundaries) => !prevShowBoundaries)
-
   return (
     <Router>
       <Box
         p={2}
         sx={{
           position: 'relative',
-          border: `2px dashed ${showBoundaries ? APP_SHELL_COLOR : 'transparent'}`,
+          border: `2px dashed ${APP_SHELL_COLOR}`,
         }}
       >
         <Box mb={2}>
-          <Nav showBoundaries={showBoundaries} toggleBoundaries={toggleBoundaries} />
+          <Nav />
         </Box>
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <React.Suspense fallback="Loading...">
-                <One />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/horizontal"
-            element={
-              <React.Suspense fallback="Loading...">
-                <Two />
-              </React.Suspense>
-            }
-          />
-        </Routes>
-        {showBoundaries && <Label color={APP_SHELL_COLOR} label="app-shell" />}
+        <React.Suspense fallback="Loading...">
+          <Switch>
+            <Route exact path="/" render={() => renderMFE(Vertical)} />
+            <Route path="/horizontal" render={() => renderMFE(Two)} />
+          </Switch>
+        </React.Suspense>
+        <Label color={APP_SHELL_COLOR} label={APP_SHELL_LABEL} />
       </Box>
     </Router>
   )
