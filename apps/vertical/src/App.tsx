@@ -9,6 +9,9 @@ const App = () => (
   <Box
     p={2}
     mb={2}
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
     sx={{
       position: 'relative',
       border: `2px dashed ${VERTICAL_MFE_COLOR}`,

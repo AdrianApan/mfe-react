@@ -20,6 +20,9 @@ const App = ({ emitter }: Props) => {
     <Box
       p={4}
       mb={2}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
       sx={{
         position: 'relative',
         border: `2px dashed ${LEFT_MFE_COLOR}`,
