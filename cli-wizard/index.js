@@ -51,6 +51,8 @@ const run = async () => {
       // Populate with MFE details
       if (description) {
         shell.sed('-i', 'foobar', description, `${targetPath}/package.json`)
+      } else {
+        shell.sed('-i', 'foobar', '', `${targetPath}/package.json`)
       }
 
       if (type !== 'shell') {
@@ -76,8 +78,8 @@ const run = async () => {
       )
 
       // Success and stop spinner
-      console.log(chalk.green('\n✅ MFE succesfully generated!'))
       status.stop()
+      console.log(chalk.green('\n✅ MFE succesfully generated!'))
     })
     .catch((err) => {
       if (err) {
