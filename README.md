@@ -83,13 +83,16 @@ lerna run --parallel SCRIPT_NAME
 
 ## 🖥 Adding a new MFE
 
+https://user-images.githubusercontent.com/69169115/148098527-539d258a-ccb0-42ec-b79c-a5925e757bed.mp4
+
+
 To generate a new remote (MFE) run the following command:
 
 ```
 yarn generate-mfe
 ```
 
-This will run a CLI wizard (node app located in the `./cli-wizard` directory) that will generate a new remote (MFE) based on a set of 3 questions. Under the hood this CLI wizard clones a boilerplate repository and renames the content of certain files to match the prompts.
+This will run a CLI wizard (node app located in the `./cli-wizard` directory) that will generate a new remote (MFE) based on a set of 3 questions. Under the hood this CLI wizard clones a [boilerplate repository](https://github.com/AdrianApan/mfe-boilerplate) and renames the content of certain files to match the prompts.
 
 After generating a new remote (MFE), make sure to update the port numbers, as follows:
 
