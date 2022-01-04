@@ -13,7 +13,8 @@
     "build": "yarn clean && lerna run --parallel build",
     "serve": "lerna run --parallel serve",
     "clean": "lerna run --parallel clean",
-    "make-types": "lerna run --parallel make-types"
+    "make-types": "lerna run --parallel make-types",
+    "generate-mfe": "node ./cli-wizard/index.js"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
