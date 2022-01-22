@@ -16,6 +16,6 @@
     "figlet": "^1.5.2",
     "git-clone": "^0.2.0",
     "inquirer": "^8.2.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.5"
   }
 }
